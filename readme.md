@@ -76,7 +76,7 @@ This project is open source and welcomes contributions from the community. To co
 
 For any inquiries or support, please reach out to:
 
-- **Name**: Sourav
+- **Name**: Sourav Dubey
 - **Email**: [souravdubey754@gmail.com](mailto:souravdubey754@gmail.com)
 - **LinkedIn**: [Sourav Dubey](https://www.linkedin.com/in/souravdubey)
 - **GitHub**: [Souravgne](https://github.com/Souravgne/Scrapper.ai)
