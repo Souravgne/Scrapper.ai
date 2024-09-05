@@ -19,7 +19,7 @@ To install Scrapper.ai, run:
 
 ```bash
 npm install scrapper.ai
-
+```
 ## Usage
 
 Here's a basic example of how to use the `ScraperClient` class to scrape a web page and format its content:
