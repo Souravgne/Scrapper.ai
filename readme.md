@@ -28,11 +28,11 @@ Here's a basic example of how to use the `ScraperClient` class to scrape a web p
 import { ScraperClient } from 'scrapper.ai'; // Ensure the correct package name
 
 (async () => {
-  const client = new ScraperClient({ apiKey: process.env.GOOGLE_API_KEY }); // Use an environment variable for the API key
+  const client = new ScraperClient({ apiKey: process.env.GOOGLE_API_KEY }); // Use an environment variable for the API key . genrate your own google gemini api key from https://aistudio.google.com/app/apikey .
 
   try {
     const results = await client.crawl({
-      url: "Your URL",
+      url: "URL of the website to scrape",
     });
 
     console.log(results); // Output the generated markdown data
