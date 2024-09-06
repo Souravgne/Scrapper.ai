@@ -1,17 +1,17 @@
 # Scrapper.ai
 
-**Scrapper.ai** is a powerful Node.js library designed for efficient web scraping and text formatting. Leveraging Google's Gemini 1.5 Pro model, this library simplifies the extraction and conversion of web page content into structured markdown, making it ideal for generating LLM-ready data.
+**Scrapper.ai** is a powerful Node.js library designed for efficient web scraping and text extraction. This library simplifies the extraction and conversion of web page content into structured markdown, making it ideal for generating LLM-ready data.
 
 ## Overview
 
-Scrapper.ai offers a seamless way to fetch, process, and format web content using advanced AI technologies. The library is completely free to use, and you can utilize your own Google Gemini API key for processing.
+Scrapper.ai offers a seamless way to fetch, process, and format web content using modern web scraping techniques. The library is completely free to use.
 
 ## Features
 
 - **Web Page Fetching**: Efficiently retrieves web page content using Axios.
-- **Chunk Processing**: Divides content into manageable chunks for optimized processing.
-- **AI-Powered Formatting**: Converts raw text into well-structured markdown using Google's Gemini 1.5 Pro model.
-- **Markdown Output**: Provides the formatted content in markdown format.
+- **Text Extraction**: Extracts meaningful content from the raw HTML of web pages.
+- **Structured Formatting**: Converts raw HTML into structured markdown-like text.
+- **API Key-Free**: No longer requires API keys or dotenv configurations, making it easy to use on both Node.js and browser environments.
 
 ## Installation
 
@@ -19,50 +19,46 @@ To install Scrapper.ai, run:
 
 ```bash
 npm install scrapper.ai
+
 ```
 ## Usage
 
-Here's a basic example of how to use the `ScraperClient` class to scrape a web page and format its content:
+Here's a basic example of how to use the `ScraperClient` class in react to scrape a web page and format its content:
 
 ```javascript
-import { ScraperClient } from 'scrapper.ai'; // Ensure the correct package name
+import { ScraperClient } from 'scrapper.ai'; 
 
 (async () => {
-  const client = new ScraperClient({ apiKey: process.env.GOOGLE_API_KEY }); // Use an environment variable for the API key . genrate your own google gemini api key from https://aistudio.google.com/app/apikey .
+  const client = new ScraperClient();
 
   try {
     const results = await client.crawl({
-      url: "URL of the website to scrape",
+      url: "https://example.com", // Replace with the URL of the website to scrape
     });
 
-    console.log(results); // Output the generated markdown data
+    console.log(results); // Output the extracted text content
   } catch (error) {
     console.error('Error:', error.message);
   }
 })();
+
 ```
 
+## Features Breakdown
 
-## Scripts
+- **Axios**: Scrapes the page content using HTTP requests.
+- **JSDOM**: Parses the HTML content and removes unnecessary tags (like `<script>`, `<style>`, etc.).
+- **Simple to Use**: No need for environment configuration or third-party APIs.
 
-- `test`: Placeholder script for testing.
-- `build`: Transpiles source code using Babel (`babel src --out-dir lib`).
-- `minify`: Minifies JavaScript files using Terser (`terser lib/*.js --compress --mangle --output lib/`).
 
 ## Dependencies
 
-- `@google/generative-ai`: `^0.17.1`
+
 - `axios`: `^1.7.7`
-- `cheerio`: `^1.0.0`
-- `dotenv`: `^16.4.5`
-- `openai`: `^4.57.0`
-- `p-limit`: `^6.1.0`
+- `jsdom`: `^25.0.0`
 
-## DevDependencies
 
-- `@babel/cli`: `^7.25.6`
-- `@babel/preset-env`: `^7.25.4`
-- `terser`: `^5.31.6`
+
 
 ## Live Demo
 
